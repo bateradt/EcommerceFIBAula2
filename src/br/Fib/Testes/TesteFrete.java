@@ -8,20 +8,20 @@ public class TesteFrete {
 
 	public static void main(String[] args) {
 
-		FreteCorreios frete = new FreteCorreios();
-		frete.calcularFrete("00");
+		FreteCorreios frete = new FreteCorreios("11");
 		System.out.println(frete.getValor());
 		System.out.println(frete.getPrazo());
+		System.out.println(frete.getTipo());
 
-		FreteLoja frete1 = new FreteLoja();
-		frete1.calcularFrete("12");
+		FreteLoja frete1 = new FreteLoja("55");
 		System.out.println(frete1.getValor());
 		System.out.println(frete1.getPrazo());
+		System.out.println(frete1.getTipo());
 
-		FreteTransportadora frete2 = new FreteTransportadora();
-		frete2.calcularFrete("55");
+		FreteTransportadora frete2 = new FreteTransportadora("66");
 		System.out.println(frete2.getValor());
 		System.out.println(frete2.getPrazo());
+		System.out.println(frete2.getTipo());
 
 	}
 

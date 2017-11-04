@@ -1,15 +1,14 @@
 package br.Fib.Ecommece;
 
-public abstract class Frete implements FreteInterface {
+public abstract class Frete {
 
 	private double valor;
 	private int prazo;
+	private TipoFreteEnum tipo;
 
-	public void calcularFrete(String cep) {
-
+	public Frete(String cep) {
 		valor = 0;
 		prazo = 0;
-
 	}
 
 	public double getValor() {
@@ -26,6 +25,14 @@ public abstract class Frete implements FreteInterface {
 
 	public void setPrazo(int prazo) {
 		this.prazo = prazo;
+	}
+
+	public TipoFreteEnum getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoFreteEnum tipo) {
+		this.tipo = tipo;
 	}
 
 }
