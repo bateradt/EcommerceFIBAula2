@@ -2,39 +2,39 @@ package br.Fib.Ecommece;
 
 public abstract class Produto {
 
-	private String Descricao;
-	private Double Valor;
-	private String Informacoes;
-	private String CodigoBarras;
-	private Double Peso;
+	private String descricao;
+	private Double valor;
+	private String informacoes;
+	private String codigoBarras;
+	private Double peso;
 
 	public Produto(String descricao, Double valor, String informacoes, String codigoBarras, Double peso) {
 		super();
-		Descricao = descricao;
-		Valor = valor;
-		Informacoes = informacoes;
-		CodigoBarras = codigoBarras;
-		Peso = peso;
+		this.descricao = descricao;
+		this.valor = valor;
+		this.informacoes = informacoes;
+		this.codigoBarras = codigoBarras;
+		this.peso = peso;
 	}
 
 	public String getDescricao() {
-		return Descricao;
+		return descricao;
 	}
 
 	public Double getValor() {
-		return Valor;
+		return valor;
 	}
 
 	public String getInformacoes() {
-		return Informacoes;
+		return informacoes;
 	}
 
 	public String getCodigoBarras() {
-		return CodigoBarras;
+		return codigoBarras;
 	}
 
 	public Double getPeso() {
-		return Peso;
+		return peso;
 	}
 
 }

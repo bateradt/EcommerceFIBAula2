@@ -7,77 +7,77 @@ public class Livro extends Produto {
 		// TODO Auto-generated constructor stub
 	}
 
-	private String Autor;
-	private String Editora;
-	private String ISBN;
-	private String Paginas;
-	private String Edicao;
-	private String Ano;
-	private String Assunto;
-	private String Idioma;
+	private String autor;
+	private String editora;
+	private String iSBN;
+	private String paginas;
+	private String edicao;
+	private String ano;
+	private String assunto;
+	private String idioma;
 
 	public String getAutor() {
-		return Autor;
+		return autor;
 	}
 
 	public void setAutor(String autor) {
-		Autor = autor;
+		this.autor = autor;
 	}
 
 	public String getEditora() {
-		return Editora;
+		return editora;
 	}
 
 	public void setEditora(String editora) {
-		Editora = editora;
+		this.editora = editora;
 	}
 
 	public String getISBN() {
-		return ISBN;
+		return iSBN;
 	}
 
 	public void setISBN(String iSBN) {
-		ISBN = iSBN;
+		this.iSBN = iSBN;
 	}
 
 	public String getPaginas() {
-		return Paginas;
+		return paginas;
 	}
 
 	public void setPaginas(String paginas) {
-		Paginas = paginas;
+		this.paginas = paginas;
 	}
 
 	public String getEdicao() {
-		return Edicao;
+		return edicao;
 	}
 
 	public void setEdicao(String edicao) {
-		Edicao = edicao;
+		this.edicao = edicao;
 	}
 
 	public String getAno() {
-		return Ano;
+		return ano;
 	}
 
 	public void setAno(String ano) {
-		Ano = ano;
+		this.ano = ano;
 	}
 
 	public String getAssunto() {
-		return Assunto;
+		return assunto;
 	}
 
 	public void setAssunto(String assunto) {
-		Assunto = assunto;
+		this.assunto = assunto;
 	}
 
 	public String getIdioma() {
-		return Idioma;
+		return idioma;
 	}
 
 	public void setIdioma(String idioma) {
-		Idioma = idioma;
+		this.idioma = idioma;
 	}
 
 }
