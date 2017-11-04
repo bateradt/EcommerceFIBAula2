@@ -6,20 +6,9 @@ public class FreteTransportadora extends Frete {
 	private int prazo;
 
 	@Override
-	public double calcularFrete(String cep) {
-		// TODO Auto-generated method stub
-		// return super.calcularFrete(cep);
-		valor = 8;
-
-		return valor;
-	}
-
-	@Override
-	public int calculaPrazo(String cep) {
-		// TODO Auto-generated method stub
-		// return super.calculaPrazo();
-		prazo = 12;
-		return prazo;
+	public void calcularFrete(String cep) {
+		this.setValor(8);
+		this.setPrazo(12);
 	}
 
 }
