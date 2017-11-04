@@ -2,9 +2,8 @@ package br.Fib.Ecommece;
 
 public class Livro extends Produto {
 
-	public Livro(String descricao, Double valor, String informacoes, String codigoBarras, Double peso) {
-		super(descricao, valor, informacoes, codigoBarras, peso);
-		// TODO Auto-generated constructor stub
+	public Livro(String descricao, Double valor, String informacoes, String codigoBarras) {
+		super(descricao, valor, informacoes, codigoBarras);
 	}
 
 	private String autor;
@@ -15,6 +14,7 @@ public class Livro extends Produto {
 	private String ano;
 	private String assunto;
 	private String idioma;
+	private Double peso;
 
 	public String getAutor() {
 		return autor;
@@ -78,6 +78,14 @@ public class Livro extends Produto {
 
 	public void setIdioma(String idioma) {
 		this.idioma = idioma;
+	}
+
+	public Double getPeso() {
+		return peso;
+	}
+
+	public void setPeso(Double peso) {
+		this.peso = peso;
 	}
 
 }

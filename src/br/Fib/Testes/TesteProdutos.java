@@ -12,7 +12,7 @@ public class TesteProdutos {
 		// "1 Chromecast; 1Cabo de alimentação;1Adaptador de energia", 12,
 		// "NC2-6A5", "NC2-6A5");
 
-		Eletronicos chromecast = new Eletronicos("ChromeCast 2", 199.50, "Teste", "1234567890124", 100.0);
+		Eletronicos chromecast = new Eletronicos("ChromeCast 2", 199.50, "Teste", "1234567890124");
 
 		chromecast.setConteudoEmbalagem("Teste de conteudo");
 		chromecast.setFuncionalidade("Streaming de mídia");
@@ -22,7 +22,7 @@ public class TesteProdutos {
 		System.out.println(chromecast.getDescricao());
 		System.out.println(chromecast.getValor());
 
-		Livro livro = new Livro("Livro - Livro Origem", 49.90, "Teste", "9788580417661", 150.0);
+		Livro livro = new Livro("Livro - Livro Origem", 49.90, "Teste", "9788580417661");
 		livro.setAno("2017");
 		livro.setAssunto("Mistério");
 		livro.setAutor("Dan Brown");

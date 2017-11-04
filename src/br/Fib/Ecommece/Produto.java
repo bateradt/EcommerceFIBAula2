@@ -6,15 +6,13 @@ public abstract class Produto {
 	private Double valor;
 	private String informacoes;
 	private String codigoBarras;
-	private Double peso;
 
-	public Produto(String descricao, Double valor, String informacoes, String codigoBarras, Double peso) {
+	public Produto(String descricao, Double valor, String informacoes, String codigoBarras) {
 		super();
 		this.descricao = descricao;
 		this.valor = valor;
 		this.informacoes = informacoes;
 		this.codigoBarras = codigoBarras;
-		this.peso = peso;
 	}
 
 	public String getDescricao() {
@@ -31,10 +29,6 @@ public abstract class Produto {
 
 	public String getCodigoBarras() {
 		return codigoBarras;
-	}
-
-	public Double getPeso() {
-		return peso;
 	}
 
 }

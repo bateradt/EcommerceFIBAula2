@@ -2,9 +2,8 @@ package br.Fib.Ecommece;
 
 public class Eletronicos extends Produto {
 
-	public Eletronicos(String descricao, Double valor, String informacoes, String codigoBarras, Double peso) {
-		super(descricao, valor, informacoes, codigoBarras, peso);
-		// TODO Auto-generated constructor stub
+	public Eletronicos(String descricao, Double valor, String informacoes, String codigoBarras) {
+		super(descricao, valor, informacoes, codigoBarras);
 	}
 
 	private String marca;
@@ -14,6 +13,7 @@ public class Eletronicos extends Produto {
 	private int garantiaFornecedorMeses;
 	private String modelo;
 	private String referenciaModelo;
+	private Double peso;
 
 	public String getMarca() {
 		return marca;
@@ -69,6 +69,14 @@ public class Eletronicos extends Produto {
 
 	public void setReferenciaModelo(String referenciaModelo) {
 		this.referenciaModelo = referenciaModelo;
+	}
+
+	public Double getPeso() {
+		return peso;
+	}
+
+	public void setPeso(Double peso) {
+		this.peso = peso;
 	}
 
 }
