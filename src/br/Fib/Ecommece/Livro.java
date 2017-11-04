@@ -2,14 +2,19 @@ package br.Fib.Ecommece;
 
 public class Livro extends Produto {
 
-	public String Autor;
-	public String Editora;
-	public String ISBN;
-	public String Paginas;
-	public String Edicao;
-	public String Ano;
-	public String Assunto;
-	public String Idioma;
+	public Livro(String descricao, Double valor, String informacoes, String codigoBarras, Double peso) {
+		super(descricao, valor, informacoes, codigoBarras, peso);
+		// TODO Auto-generated constructor stub
+	}
+
+	private String Autor;
+	private String Editora;
+	private String ISBN;
+	private String Paginas;
+	private String Edicao;
+	private String Ano;
+	private String Assunto;
+	private String Idioma;
 
 	public String getAutor() {
 		return Autor;
