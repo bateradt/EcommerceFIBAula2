@@ -14,7 +14,7 @@ public class Carrinho {
 	
 	public void removeProduto(Produto produto) {
 		this.itens.remove(produto);
-		this.total += produto.getValor();
+		this.total -= produto.getValor();
 	}
 	
 	public List<Produto> listarItensCarrinho() {
