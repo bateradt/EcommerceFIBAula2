@@ -13,22 +13,17 @@ public class Carrinho{
 		itens = new ArrayList<ItensCarrinho>();
 	}
 	
-	public void adicionarProduto(Produto produto, int qtde) {
+	public void adicionarProduto(Produto produto, int quantidade) {
 		/*this.qtde += qtde;
 		this.total += produto.getValor();
 		this.itens.add(produto);*/
 		
-		this.qtde += qtde;
+		this.qtde += quantidade;
 		this.total += produto.getValor();
 		
-		ItensCarrinho item = new ItensCarrinho();
+		ItensCarrinho item = new ItensCarrinho(produto, quantidade, produto.getValor(), produto.getValor() * quantidade);
 		
-		item.setProduto(produto);
-		item.setQtde(qtde);
-		item.setVlUnit(produto.getValor());
-		item.setVlTotal(produto.getValor() * qtde);
-		
-		itens.add(item);
+		itens.add(item); 
 	}
 	
 	public void removeProduto(Produto produto) {
