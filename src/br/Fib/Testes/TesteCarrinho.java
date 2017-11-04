@@ -1,5 +1,7 @@
 package br.Fib.Testes;
 
+import java.text.NumberFormat;
+
 import br.Fib.Ecommece.Carrinho;
 import br.Fib.Ecommece.Eletronicos;
 import br.Fib.Ecommece.FreteTransportadora;
@@ -23,7 +25,7 @@ public class TesteCarrinho {
 
 		carrinho.adicionarProduto(livro, 1);
 
-		System.out.println("Total carrinho: R$ " + carrinho.getTotal());
+		// System.out.println("Total carrinho: R$ " + carrinho.getTotal());
 
 		Eletronicos chromecast = new Eletronicos("ChromeCast 2", 199.50, "Teste", "1234567890124", 100.0);
 
@@ -32,26 +34,50 @@ public class TesteCarrinho {
 		chromecast.setGarantiaFornecedorMeses(12);
 		chromecast.setMarca("Google");
 
-		carrinho.adicionarProduto(chromecast, 5);
+		carrinho.adicionarProduto(chromecast, 3);
 
-		System.out.println("Total carrinho: R$ " + carrinho.getTotal());
+		// System.out.println("Total carrinho: R$ " + carrinho.getTotal());
 
 		for (ItensCarrinho item : carrinho.getItens()) {
-			System.out.println(
-					"Item: " + item.getProduto().getDescricao() + " Valor R$: " + item.getProduto().getValor() + "\n");
+			System.out.println(item.getQtde() + " x - Item: " + item.getProduto().getDescricao() + " Valor R$: "
+					+ item.getProduto().getValor() + " Tot.: " + item.getQtde() * item.getVlUnit() + "\n");
 		}
 
 		FreteTransportadora frete = new FreteTransportadora("16202040");
+		System.out.println("Subtotal: " + carrinho.getTotal());
 
-		carrinho.finalizar(frete);
+		System.out.println(" ------------------------------- \n");
 
-		System.out.println("Frete: " + frete.getValor());
-		System.out.println("Total Compra R$ " + carrinho.getTotal());
+		carrinho.removeProduto(chromecast, 1);
 
 		for (ItensCarrinho item : carrinho.getItens()) {
-			System.out.println(
-					"Item: " + item.getProduto().getDescricao() + " Valor R$: " + item.getProduto().getValor() + "\n");
+			System.out.println(item.getQtde() + " x - Item: " + item.getProduto().getDescricao() + " Valor R$: "
+					+ item.getProduto().getValor() + " Tot.: " + item.getQtde() * item.getVlUnit() + "\n");
 		}
+
+		System.out.println("Subtotal: " + carrinho.getTotal());
+		System.out.println(" ------------------------------- \n");
+
+		carrinho.removeProduto(livro, 1);
+
+		for (ItensCarrinho item : carrinho.getItens()) {
+			System.out.println(item.getQtde() + " x - Item: " + item.getProduto().getDescricao() + " Valor R$: "
+					+ item.getProduto().getValor() + " Tot.: " + item.getQtde() * item.getVlUnit() + "\n");
+		}
+
+		System.out.println("Subtotal: " + carrinho.getTotal());
+
+		carrinho.finalizar(frete);
+		System.out.println("Frete: " + frete.getValor() + " /  " + frete.getTipo());
+		System.out.println("Total Compra " + NumberFormat.getCurrencyInstance().format(carrinho.getTotal()));
+
+		/*
+		 * for (ItensCarrinho item : carrinho.getItens()) { System.out.println(
+		 * "Item: " + item.getProduto().getDescricao() + " Valor R$: " +
+		 * item.getProduto().getValor() + "\n"); }
+		 */
+		// System.out.println("Total carrinho: R$ " + carrinho.getTotal());
+
 	}
 
 }

@@ -2,6 +2,7 @@ package br.Fib.Testes;
 
 import br.Fib.Ecommece.FreteCorreios;
 import br.Fib.Ecommece.FreteLoja;
+import br.Fib.Ecommece.FreteMotoboy;
 import br.Fib.Ecommece.FreteTransportadora;
 
 public class TesteFrete {
@@ -22,6 +23,11 @@ public class TesteFrete {
 		System.out.println(frete2.getValor());
 		System.out.println(frete2.getPrazo());
 		System.out.println(frete2.getTipo());
+
+		FreteMotoboy freteMoto = new FreteMotoboy("1700");
+		System.out.println(freteMoto.getValor());
+		System.out.println(freteMoto.getPrazo());
+		System.out.println(freteMoto.getTipo());
 
 	}
 

@@ -2,7 +2,7 @@ package br.Fib.Ecommece;
 
 public enum TipoFreteEnum {
 
-	LOJA(1), CORREIOS(2), TRANSPORTADORA(3);
+	LOJA(1), CORREIOS(2), TRANSPORTADORA(3), MOTOBOY(4);
 
 	private int tipoFrete;
 
