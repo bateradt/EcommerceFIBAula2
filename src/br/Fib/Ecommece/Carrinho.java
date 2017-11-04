@@ -8,13 +8,13 @@ public class Carrinho {
 	List<Produto> itens = new ArrayList<Produto>();
 	
 	public void adicionarProduto(Produto produto) {
-		//this.total += produto.getValor();
+		this.total += produto.getValor();
 		this.itens.add(produto);
 	}
 	
 	public void removeProduto(Produto produto) {
 		this.itens.remove(produto);
-		//this.total += produto.getValor();
+		this.total += produto.getValor();
 	}
 	
 	public List<Produto> listarItensCarrinho() {
@@ -23,7 +23,6 @@ public class Carrinho {
 	
 	public void finalizar(Frete frete) {
 		//total =+ frete.getValor();
-		
 	}
 
 	public List<Produto> getItens() {
@@ -32,5 +31,13 @@ public class Carrinho {
 
 	public void setItens(List<Produto> itens) {
 		this.itens = itens;
+	}
+
+	public double getTotal() {
+		return total;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
 	}
 }
