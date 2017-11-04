@@ -3,6 +3,7 @@ package br.Fib.Testes;
 import br.Fib.Ecommece.Carrinho;
 import br.Fib.Ecommece.Eletronicos;
 import br.Fib.Ecommece.FreteTransportadora;
+import br.Fib.Ecommece.ItensCarrinho;
 import br.Fib.Ecommece.Livro;
 import br.Fib.Ecommece.Produto;
 
@@ -20,7 +21,8 @@ public class TesteCarrinho {
 		livro.setISBN("9788580417661");
 		
 		Carrinho carrinho  = new Carrinho();
-		carrinho.adicionarProduto(livro);
+		
+		carrinho.adicionarProduto(livro, 1);
 		
 		System.out.println("Total carrinho: R$ " + carrinho.getTotal());
 		
@@ -31,12 +33,12 @@ public class TesteCarrinho {
 		chromecast.setGarantiaFornecedorMeses(12);
 		chromecast.setMarca("Google");
 		
-		carrinho.adicionarProduto(chromecast);
+		carrinho.adicionarProduto(chromecast, 5);
 		
 		System.out.println("Total carrinho: R$ " + carrinho.getTotal());
 		
-		for(Produto item : carrinho.getItens()) {
-			System.out.println("Item: " + item.getDescricao() + " Valor R$: " + item.getValor() + "\n");
+		for(ItensCarrinho item : carrinho.getItens()) {
+			System.out.println("Item: " + item.getProduto().getDescricao() + " Valor R$: " + item.getProduto().getValor() + "\n");
 		}
 		
 		FreteTransportadora frete = new FreteTransportadora();
@@ -44,11 +46,11 @@ public class TesteCarrinho {
 		
 		carrinho.finalizar(frete);
 		
-		System.out.println("Frete: " + frete.toString());
+		System.out.println("Frete: " + frete.getValor());
 		System.out.println("Total Compra R$ " + carrinho.getTotal());
 		
-		for(Produto item : carrinho.getItens()) {
-			System.out.println("Item: " + item.getDescricao() + " Valor R$: " + item.getValor() + "\n");
+		for(ItensCarrinho item : carrinho.getItens()) {
+			System.out.println("Item: " + item.getProduto().getDescricao() + " Valor R$: " + item.getProduto().getValor() + "\n");
 		}
 	}
 

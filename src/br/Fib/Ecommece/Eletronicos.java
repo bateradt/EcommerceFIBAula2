@@ -7,68 +7,68 @@ public class Eletronicos extends Produto {
 		// TODO Auto-generated constructor stub
 	}
 
-	private String Marca;
-	private String Funcionalidade;
-	private String Voltagem;
-	private String ConteudoEmbalagem;
-	private int GarantiaFornecedorMeses;
-	private String Modelo;
-	private String ReferenciaModelo;
+	private String marca;
+	private String funcionalidade;
+	private String voltagem;
+	private String conteudoEmbalagem;
+	private int garantiaFornecedorMeses;
+	private String modelo;
+	private String referenciaModelo;
 
 	public String getMarca() {
-		return Marca;
+		return marca;
 	}
 
 	public void setMarca(String marca) {
-		Marca = marca;
+		this.marca = marca;
 	}
 
 	public String getFuncionalidade() {
-		return Funcionalidade;
+		return funcionalidade;
 	}
 
 	public void setFuncionalidade(String funcionalidade) {
-		Funcionalidade = funcionalidade;
+		this.funcionalidade = funcionalidade;
 	}
 
 	public String getVoltagem() {
-		return Voltagem;
+		return voltagem;
 	}
 
 	public void setVoltagem(String voltagem) {
-		Voltagem = voltagem;
+		this.voltagem = voltagem;
 	}
 
 	public String getConteudoEmbalagem() {
-		return ConteudoEmbalagem;
+		return conteudoEmbalagem;
 	}
 
 	public void setConteudoEmbalagem(String conteudoEmbalagem) {
-		ConteudoEmbalagem = conteudoEmbalagem;
+		this.conteudoEmbalagem = conteudoEmbalagem;
 	}
 
 	public int getGarantiaFornecedorMeses() {
-		return GarantiaFornecedorMeses;
+		return garantiaFornecedorMeses;
 	}
 
 	public void setGarantiaFornecedorMeses(int garantiaFornecedorMeses) {
-		GarantiaFornecedorMeses = garantiaFornecedorMeses;
+		this.garantiaFornecedorMeses = garantiaFornecedorMeses;
 	}
 
 	public String getModelo() {
-		return Modelo;
+		return modelo;
 	}
 
 	public void setModelo(String modelo) {
-		Modelo = modelo;
+		this.modelo = modelo;
 	}
 
 	public String getReferenciaModelo() {
-		return ReferenciaModelo;
+		return referenciaModelo;
 	}
 
 	public void setReferenciaModelo(String referenciaModelo) {
-		ReferenciaModelo = referenciaModelo;
+		this.referenciaModelo = referenciaModelo;
 	}
 
 }
