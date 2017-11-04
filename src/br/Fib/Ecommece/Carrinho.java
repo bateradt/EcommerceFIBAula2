@@ -25,4 +25,12 @@ public class Carrinho {
 		//total =+ frete.getValor();
 		
 	}
+
+	public List<Produto> getItens() {
+		return itens;
+	}
+
+	public void setItens(List<Produto> itens) {
+		this.itens = itens;
+	}
 }
