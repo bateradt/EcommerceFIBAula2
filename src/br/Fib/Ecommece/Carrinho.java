@@ -14,10 +14,6 @@ public class Carrinho{
 	}
 	
 	public void adicionarProduto(Produto produto, int quantidade) {
-		/*this.qtde += qtde;
-		this.total += produto.getValor();
-		this.itens.add(produto);*/
-		
 		this.qtde += quantidade;
 		this.total += produto.getValor();
 		
