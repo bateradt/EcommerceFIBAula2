@@ -17,7 +17,12 @@ public class Carrinho {
 		//this.total += produto.getValor();
 	}
 	
-	public void finalizar() {
+	public List<Produto> listarItensCarrinho() {
+		return this.itens;
+	}
+	
+	public void finalizar(Frete frete) {
+		//total =+ frete.getValor();
 		
 	}
 }
