@@ -1,14 +1,19 @@
 package br.Fib.Ecommece;
 
-public class Eletronicos {
+public class Eletronicos extends Produto {
 
-	public String Marca;
-	public String Funcionalidade;
-	public String Voltagem;
-	public String ConteudoEmbalagem;
-	public int GarantiaFornecedorMeses;
-	public String Modelo;
-	public String ReferenciaModelo;
+	public Eletronicos(String descricao, Double valor, String informacoes, String codigoBarras, Double peso) {
+		super(descricao, valor, informacoes, codigoBarras, peso);
+		// TODO Auto-generated constructor stub
+	}
+
+	private String Marca;
+	private String Funcionalidade;
+	private String Voltagem;
+	private String ConteudoEmbalagem;
+	private int GarantiaFornecedorMeses;
+	private String Modelo;
+	private String ReferenciaModelo;
 
 	public String getMarca() {
 		return Marca;

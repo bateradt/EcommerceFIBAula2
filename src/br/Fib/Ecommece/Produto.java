@@ -2,12 +2,20 @@ package br.Fib.Ecommece;
 
 public abstract class Produto {
 
-	public String Descricao;
-	public Double Valor;
-	public String Informacoes;
-	public String CodigoBarras;
-	public String Peso;
-	public String Dimensoes;
+	private String Descricao;
+	private Double Valor;
+	private String Informacoes;
+	private String CodigoBarras;
+	private Double Peso;
+
+	public Produto(String descricao, Double valor, String informacoes, String codigoBarras, Double peso) {
+		super();
+		Descricao = descricao;
+		Valor = valor;
+		Informacoes = informacoes;
+		CodigoBarras = codigoBarras;
+		Peso = peso;
+	}
 
 	public String getDescricao() {
 		return Descricao;
@@ -41,20 +49,12 @@ public abstract class Produto {
 		CodigoBarras = codigoBarras;
 	}
 
-	public String getPeso() {
+	public Double getPeso() {
 		return Peso;
 	}
 
-	public void setPeso(String peso) {
+	public void setPeso(Double peso) {
 		Peso = peso;
-	}
-
-	public String getDimensoes() {
-		return Dimensoes;
-	}
-
-	public void setDimensoes(String dimensoes) {
-		Dimensoes = dimensoes;
 	}
 
 }
