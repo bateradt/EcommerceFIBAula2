@@ -5,7 +5,6 @@ import br.Fib.Ecommece.Eletronicos;
 import br.Fib.Ecommece.FreteTransportadora;
 import br.Fib.Ecommece.ItensCarrinho;
 import br.Fib.Ecommece.Livro;
-import br.Fib.Ecommece.Produto;
 
 public class TesteCarrinho {
 
@@ -19,38 +18,39 @@ public class TesteCarrinho {
 		livro.setEditora("Arqueiro");
 		livro.setIdioma("BR");
 		livro.setISBN("9788580417661");
-		
-		Carrinho carrinho  = new Carrinho();
-		
+
+		Carrinho carrinho = new Carrinho();
+
 		carrinho.adicionarProduto(livro, 1);
-		
+
 		System.out.println("Total carrinho: R$ " + carrinho.getTotal());
-		
+
 		Eletronicos chromecast = new Eletronicos("ChromeCast 2", 199.50, "Teste", "1234567890124", 100.0);
 
 		chromecast.setConteudoEmbalagem("Teste de conteudo");
 		chromecast.setFuncionalidade("Streaming de mídia");
 		chromecast.setGarantiaFornecedorMeses(12);
 		chromecast.setMarca("Google");
-		
+
 		carrinho.adicionarProduto(chromecast, 5);
-		
+
 		System.out.println("Total carrinho: R$ " + carrinho.getTotal());
-		
-		for(ItensCarrinho item : carrinho.getItens()) {
-			System.out.println("Item: " + item.getProduto().getDescricao() + " Valor R$: " + item.getProduto().getValor() + "\n");
+
+		for (ItensCarrinho item : carrinho.getItens()) {
+			System.out.println(
+					"Item: " + item.getProduto().getDescricao() + " Valor R$: " + item.getProduto().getValor() + "\n");
 		}
-		
-		FreteTransportadora frete = new FreteTransportadora();
-		frete.calcularFrete("16202040");
-		
+
+		FreteTransportadora frete = new FreteTransportadora("16202040");
+
 		carrinho.finalizar(frete);
-		
+
 		System.out.println("Frete: " + frete.getValor());
 		System.out.println("Total Compra R$ " + carrinho.getTotal());
-		
-		for(ItensCarrinho item : carrinho.getItens()) {
-			System.out.println("Item: " + item.getProduto().getDescricao() + " Valor R$: " + item.getProduto().getValor() + "\n");
+
+		for (ItensCarrinho item : carrinho.getItens()) {
+			System.out.println(
+					"Item: " + item.getProduto().getDescricao() + " Valor R$: " + item.getProduto().getValor() + "\n");
 		}
 	}
 
