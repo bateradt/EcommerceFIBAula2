@@ -2,12 +2,12 @@ package br.Fib.Ecommece;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Carrinho{
 	int qtde = 0;
 	double total = 0;
 	List<ItensCarrinho> itens = new ArrayList<ItensCarrinho>();
-	//List<Produto> itens = new ArrayList<Produto>();
 	
 	public Carrinho() {
 		itens = new ArrayList<ItensCarrinho>();
@@ -15,7 +15,7 @@ public class Carrinho{
 	
 	public void adicionarProduto(Produto produto, int quantidade) {
 		this.qtde += quantidade;
-		this.total += produto.getValor();
+		this.total += (produto.getValor() * quantidade);
 		
 		ItensCarrinho item = new ItensCarrinho(produto, quantidade, produto.getValor(), produto.getValor() * quantidade);
 		
@@ -23,9 +23,13 @@ public class Carrinho{
 	}
 	
 	public void removeProduto(Produto produto) {
+		Optional<ItensCarrinho> item = this.itens.stream().filter(obj -> obj.getProduto() == produto).findFirst();
 		
-		this.itens.remove(produto);
-		this.total -= produto.getValor();
+		if(item.isPresent()) {
+			this.total -= (produto.getValor() * item.get().getQtde());
+			this.qtde -= item.get().getQtde();
+			this.itens.remove(item.get());
+		}
 	}
 	
 	public List<ItensCarrinho> listarItensCarrinho() {

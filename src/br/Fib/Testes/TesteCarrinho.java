@@ -46,7 +46,7 @@ public class TesteCarrinho {
 		
 		carrinho.finalizar(frete);
 		
-		System.out.println("Frete: " + frete.toString());
+		System.out.println("Frete: " + frete.getValor());
 		System.out.println("Total Compra R$ " + carrinho.getTotal());
 		
 		for(ItensCarrinho item : carrinho.getItens()) {
